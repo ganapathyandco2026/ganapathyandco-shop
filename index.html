@@ -1,1 +1,766 @@
-test
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganapathy & Co | Quality Furniture & Electronics in Attur, Salem</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fdfbf7',
+                            100: '#f7f2e7',
+                            200: '#eee2cd',
+                            300: '#e1cda8',
+                            400: '#d2b17d',
+                            500: '#c29656',
+                            600: '#ac7c46',
+                            700: '#8c603b',
+                            800: '#724e35',
+                            900: '#5e402e',
+                            accent: '#2b580c',
+                            slate: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8f9fa;
+            color: #334155;
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+        /* Custom Header & Brand Tweaks */
+        .glass-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+        }
+
+        :root {
+            --brand-navy: #2D1B69;
+            --brand-pink: #D81B60;
+        }
+
+        /* Primary buttons refreshed to match brand navy/purple */
+        .bg-brand-700 {
+            background-color: var(--brand-navy) !important;
+        }
+
+        .bg-brand-700:hover {
+            background-color: #1a0f40 !important;
+        }
+
+        .text-brand-600, .text-brand-700 {
+            color: var(--brand-navy) !important;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Bar -->
+    <div class="bg-brand-900 text-amber-50 text-xs py-2.5 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+                <p class="font-medium">Welcome to Attur's Trusted Destination for Fine Furniture & Quality Home Electronics</p>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-light">
+                <span><i class="fa-solid fa-location-dot me-1.5 text-brand-400"></i> Ammampalayam, Attur, Salem</span>
+                <a href="mailto:ganapathyandco2026@gmail.com" class="hover:text-brand-300 transition-colors"><i class="fa-solid fa-envelope me-1.5 text-brand-400"></i> ganapathyandco2026@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-40 glass-header border-b border-amber-100 shadow-sm transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Navigation Brand with Logo -->
+                <!-- Navigation Brand Header -->
+                <a class="flex items-center gap-3 group focus:outline-none" href="#home">
+                    <!-- Standalone Emblem Logo -->
+                    <div class="relative flex items-center justify-center p-1.5 bg-white rounded-xl border border-slate-100 shadow-sm group-hover:border-purple-200 transition-all">
+                        <img src="images/logo2.jpeg" alt="Ganapathy & Co Logo" class="h-12 w-auto object-contain transform group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    
+                    <!-- Clean Structured Brand Name -->
+                    <div class="flex flex-col justify-center leading-tight">
+                        <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-[#2D1B69] group-hover:text-purple-900 transition-colors">
+                            Ganapathy <span class="text-[#D81B60]">&</span> Co
+                        </span>
+                        <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#D81B60] opacity-90">
+                            Furnitures & Home Appliances
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-8 font-medium text-sm text-slate-700">
+                    <a href="#home" class="hover:text-brand-700 transition-colors py-2 border-b-2 border-transparent hover:border-brand-500">Home</a>
+                    <a href="#about" class="hover:text-brand-700 transition-colors py-2 border-b-2 border-transparent hover:border-brand-500">Heritage & About</a>
+                    <a href="#categories" class="hover:text-brand-700 transition-colors py-2 border-b-2 border-transparent hover:border-brand-500">Our Collections</a>
+                    <a href="#contact" class="hover:text-brand-700 transition-colors py-2 border-b-2 border-transparent hover:border-brand-500">Contact & Location</a>
+                </nav>
+
+                <!-- Header Action Button -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="#contact" class="px-5 py-2.5 rounded-full bg-brand-700 hover:bg-brand-800 text-white shadow-sm hover:shadow transition-all text-sm font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-xs"></i>
+                        <span>Email Inquiry</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-slate-700 hover:text-brand-700 p-2 focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Navigation -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#home" class="mobile-link block px-3 py-2 rounded-lg font-medium text-slate-700 hover:bg-amber-50 hover:text-brand-700">Home</a>
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-lg font-medium text-slate-700 hover:bg-amber-50 hover:text-brand-700">Heritage & About</a>
+            <a href="#categories" class="mobile-link block px-3 py-2 rounded-lg font-medium text-slate-700 hover:bg-amber-50 hover:text-brand-700">Our Collections</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-lg font-medium text-slate-700 hover:bg-amber-50 hover:text-brand-700">Contact & Location</a>
+            <div class="pt-4">
+                <a href="#contact" class="mobile-link w-full py-3 rounded-xl bg-brand-700 text-center text-white font-semibold flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-envelope"></i> Send Email Inquiry
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative light-gradient-bg py-16 lg:py-24 border-b border-amber-100 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-amber-200/80 text-brand-700 text-xs sm:text-sm font-semibold shadow-xs">
+                        <i class="fa-solid fa-award text-brand-500"></i> Attur's Premier Home Furnishing Hub
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight font-heading">
+                        Timeless Elegance & <span class="text-brand-600">Modern Comfort</span> For Your Home
+                    </h1>
+                    <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                        Discover handcrafted solid teak furniture and reliable home electronics. Built on quality and trust, serving families across Attur and Salem district for generations.
+                    </p>
+
+                    <!-- Feature Badges -->
+                    <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-3 text-xs sm:text-sm text-slate-700">
+                        <span class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-amber-200/60 shadow-xs"><i class="fa-solid fa-circle-check text-brand-500"></i> 100% Solid Teak Wood</span>
+                        <span class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-amber-200/60 shadow-xs"><i class="fa-solid fa-circle-check text-brand-500"></i> Top Electronic Brands</span>
+                        <span class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl border border-amber-200/60 shadow-xs"><i class="fa-solid fa-circle-check text-brand-500"></i> Trusted Attur Landmark</span>
+                    </div>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#categories" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold shadow-md hover:shadow-lg transition-all text-center text-base flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-store"></i>
+                            <span>Explore Collections</span>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl border border-slate-300 hover:border-brand-500 bg-white text-slate-700 hover:text-brand-700 font-semibold transition-all text-center text-base flex items-center justify-center gap-2 shadow-xs">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Inquire via Email</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Main Frame -->
+                        <div class="bg-white border border-amber-200/80 rounded-3xl p-4 shadow-xl">
+                            <div class="relative rounded-2xl overflow-hidden h-72 sm:h-96 bg-stone-100">
+                                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800" 
+                                     alt="Ganapathy & Co Living Room Display" 
+                                     class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                                     onerror="this.src='https://placehold.co/800x600/f7f2e7/5e402e?text=Ganapathy+%26+Co+Showroom'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent flex flex-col justify-end p-6">
+                                    <span class="text-amber-200 text-xs font-semibold uppercase tracking-wider">Showroom Quality</span>
+                                    <h3 class="text-white text-xl font-bold font-heading">Handcrafted Solid Furniture</h3>
+                                </div>
+                            </div>
+
+                            <!-- Highlights -->
+                            <div class="mt-4 grid grid-cols-3 gap-2 text-center">
+                                <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-100">
+                                    <p class="text-brand-700 font-bold text-lg">Solid</p>
+                                    <p class="text-[11px] text-slate-600 font-medium">Teak Wood</p>
+                                </div>
+                                <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-100">
+                                    <p class="text-brand-700 font-bold text-lg">Genuine</p>
+                                    <p class="text-[11px] text-slate-600 font-medium">Brand Warranty</p>
+                                </div>
+                                <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-100">
+                                    <p class="text-brand-700 font-bold text-lg">Attur</p>
+                                    <p class="text-[11px] text-slate-600 font-medium">Salem District</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History & About Section -->
+    <section id="about" class="py-16 lg:py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Image Showcase -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="relative">
+                        <div class="rounded-2xl overflow-hidden shadow-lg border border-amber-200">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800" 
+                                 alt="Showroom Furniture Display" 
+                                 class="w-full h-80 object-cover"
+                                 onerror="this.src='https://placehold.co/800x600/f7f2e7/5e402e?text=Ganapathy+%26+Co+Heritage'">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-brand-900 text-white p-6 rounded-2xl shadow-lg hidden sm:block border border-amber-200/30 max-w-xs">
+                            <p class="font-heading text-lg font-bold text-amber-200 mb-1">Serving Attur Region</p>
+                            <p class="text-xs text-amber-100/90 leading-relaxed">Built on generations of family trust, quality craftsmanship, and transparent service across Salem district.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <span class="text-brand-700 font-bold text-xs tracking-wider uppercase bg-amber-100/60 px-3 py-1.5 rounded-full border border-amber-200">Heritage & Trust</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 font-heading mt-3 leading-snug">
+                            Attur's Trusted Heritage for Furniture & Home Electronics
+                        </h2>
+                    </div>
+
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        Located on Ammampalayam in <strong class="text-slate-800">Attur, Salem</strong>, <strong>Ganapathy & Co</strong> has stood as a cornerstone of reliability for generations of homeowners. Our store was founded with a singular commitment: to deliver sturdy, finely crafted solid teak furniture and trusted brand-name electronics at honest, transparent prices.
+                    </p>
+
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        Whether you are setting up a new home, upgrading your living space with energy-efficient appliances, or looking for durable cots, wardrobes, and dining sets, our store brings together quality and traditional craftsmanship under one single roof.
+                    </p>
+
+                    <!-- Core Values Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-xl bg-amber-50/50 border border-amber-200/60 flex items-start gap-3.5">
+                            <div class="p-2.5 rounded-lg bg-brand-700 text-white text-base shrink-0">
+                                <i class="fa-solid fa-tree"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-sm">Solid Teak Wood</h3>
+                                <p class="text-xs text-slate-600 mt-1">Authentic hardwood cots, sofas, and dining sets designed to last for generations.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-amber-50/50 border border-amber-200/60 flex items-start gap-3.5">
+                            <div class="p-2.5 rounded-lg bg-brand-700 text-white text-base shrink-0">
+                                <i class="fa-solid fa-tv"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-sm">Branded Electronics</h3>
+                                <p class="text-xs text-slate-600 mt-1">Smart TVs, refrigerators, washing machines, and kitchen appliances with official warranty.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-amber-50/50 border border-amber-200/60 flex items-start gap-3.5">
+                            <div class="p-2.5 rounded-lg bg-brand-700 text-white text-base shrink-0">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-sm">Trusted Quality</h3>
+                                <p class="text-xs text-slate-600 mt-1">Every item undergoes strict inspection to ensure long service life and durability.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-amber-50/50 border border-amber-200/60 flex items-start gap-3.5">
+                            <div class="p-2.5 rounded-lg bg-brand-700 text-white text-base shrink-0">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-sm">Customer First</h3>
+                                <p class="text-xs text-slate-600 mt-1">Dedicated personal service and assistance for families across Salem district.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Products & Categories Section -->
+    <section id="categories" class="py-16 lg:py-24 bg-slate-50 border-t border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-700 font-bold text-xs tracking-wider uppercase bg-white px-3 py-1.5 rounded-full border border-slate-200 shadow-2xs">Curated Collections</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 font-heading mt-3">Browse Our Product Showcase</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Explore our clean selection of wooden furniture, smart electronics, and essential kitchen appliances.</p>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-wrap justify-center gap-2 mt-8" id="category-filter-buttons">
+                    <button data-filter="all" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-brand-700 text-white shadow-xs">All Collections</button>
+                    <button data-filter="furniture" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-amber-50 border border-slate-200">Wooden Furniture</button>
+                    <button data-filter="electronics" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-amber-50 border border-slate-200">Home Electronics</button>
+                    <button data-filter="kitchen" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-amber-50 border border-slate-200">Kitchen Appliances</button>
+                </div>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="product-grid">
+                
+                <!-- Furniture Item 1 -->
+                <div class="product-card group bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 border border-slate-200/80" data-category="furniture">
+                    <div class="relative h-56 bg-stone-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=800" alt="Solid Wooden Bed" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/f7f2e7/5e402e?text=Wooden+Bed'">
+                        <span class="absolute top-3 left-3 bg-brand-800 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">Wooden Furniture</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-900 group-hover:text-brand-700 transition-colors">Solid Wooden Beds & Cots</h3>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">Handcrafted teak and hardwood bed frames available in King, Queen, and Single sizes with options for under-bed storage.</p>
+                        <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">Multiple Sizes</span>
+                            <button onclick="openProductModal('Solid Wooden Beds & Cots', 'Wooden Furniture', 'Handcrafted teak and hardwood bed frames available in King, Queen, and Single sizes with custom headboard carvings.', 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=800')" class="text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center gap-1">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Furniture Item 2 -->
+                <div class="product-card group bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 border border-slate-200/80" data-category="furniture">
+                    <div class="relative h-56 bg-stone-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800" alt="Teak Wood Sofa Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/f7f2e7/5e402e?text=Teak+Sofa+Set'">
+                        <span class="absolute top-3 left-3 bg-brand-800 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">Wooden Furniture</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-900 group-hover:text-brand-700 transition-colors">Teak Sofa Sets & Seating</h3>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">3+1+1 classic carved teak sofa sets and modern plush fabric designs tailored for inviting living rooms.</p>
+                        <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">Custom Cushioning</span>
+                            <button onclick="openProductModal('Teak Sofa Sets & Seating', 'Wooden Furniture', 'Classic carved wooden sofa sets and modern fabric couches designed for comfort and elegance.', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800')" class="text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center gap-1">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Furniture Item 3 -->
+                <div class="product-card group bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 border border-slate-200/80" data-category="furniture">
+                    <div class="relative h-56 bg-stone-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=800" alt="Wooden Dining Table" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/f7f2e7/5e402e?text=Dining+Table'">
+                        <span class="absolute top-3 left-3 bg-brand-800 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">Wooden Furniture</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-900 group-hover:text-brand-700 transition-colors">Dining Tables & Chairs</h3>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">4-seater and 6-seater solid wood dining sets featuring durable finishes and ergonomic matching chairs.</p>
+                        <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">4 & 6 Seater</span>
+                            <button onclick="openProductModal('Dining Tables & Chairs', 'Wooden Furniture', 'Sturdy wooden dining tables with cushioned seating for warm family dining experiences.', 'https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=800')" class="text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center gap-1">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Furniture Item 4 -->
+                <div class="product-card group bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 border border-slate-200/80" data-category="furniture">
+                    <div class="relative h-56 bg-stone-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1748721639142-187c4ad3f8fd?auto=format&fit=crop&q=80&w=800" alt="Carved Pooja Mandapam" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/f7f2e7/5e402e?text=Pooja+Unit'">
+                        <span class="absolute top-3 left-3 bg-brand-800 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">Wooden Furniture</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-900 group-hover:text-brand-700 transition-colors">Carved Pooja Units</h3>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">Traditional carved wooden mandapams crafted with drawer storage and fine wood polishing according to Vastu needs.</p>
+                        <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">Vastu Compliant</span>
+                            <button onclick="openProductModal('Carved Pooja Units', 'Wooden Furniture', 'Sacred carved teak finish mandapams designed for home worship spaces.', 'https://images.unsplash.com/photo-1748721639142-187c4ad3f8fd?auto=format&fit=crop&q=80&w=800')" class="text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center gap-1">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Furniture Item 5 -->
+                <div class="product-card group bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 border border-slate-200/80" data-category="furniture">
+                    <div class="relative h-56 bg-stone-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=800" alt="Wardrobes & Computer Tables" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/f7f2e7/5e402e?text=Wardrobe'">
+                        <span class="absolute top-3 left-3 bg-brand-800 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">Wooden Furniture</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-900 group-hover:text-brand-700 transition-colors">Wardrobes & Computer Tables</h3>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">Spacious 2-door and 3-door wardrobes, dressing tables with full mirror, and sturdy study/computer desks.</p>
+                        <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">Home & Office</span>
+                            <button onclick="openProductModal('Wardrobes & Computer Tables', 'Wooden Furniture', 'Durable wooden storage units, mirrors, and ergonomic computer work desks.', 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=800')" class="text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center gap-1">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electronics Item 1 -->
+                <div class="product-card group bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 border border-slate-200/80" data-category="electronics">
+                    <div class="relative h-56 bg-stone-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80&w=800" alt="Smart LED TV" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/f7f2e7/1e293b?text=Smart+TV'">
+                        <span class="absolute top-3 left-3 bg-slate-800 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">Home Electronics</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-900 group-hover:text-brand-700 transition-colors">Smart LED Televisions</h3>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">High-definition 4K Smart TVs ranging from 32-inch to 65-inch from leading brands with full warranty coverage.</p>
+                        <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">4K Ultra HD</span>
+                            <button onclick="openProductModal('Smart LED Televisions', 'Home Electronics', 'Top brand Android & Smart TVs with rich picture quality and brand warranty.', 'https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80&w=800')" class="text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center gap-1">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electronics Item 2 -->
+                <div class="product-card group bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 border border-slate-200/80" data-category="electronics">
+                    <div class="relative h-56 bg-stone-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&q=80&w=800" alt="Refrigerators and Washing Machines" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/f7f2e7/1e293b?text=Refrigerators'">
+                        <span class="absolute top-3 left-3 bg-slate-800 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">Home Electronics</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-900 group-hover:text-brand-700 transition-colors">Refrigerators & Washing Machines</h3>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">Single & Double Door energy-rated refrigerators along with top-load and front-load washing machines.</p>
+                        <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">Energy Saver</span>
+                            <button onclick="openProductModal('Refrigerators & Washing Machines', 'Home Electronics', 'Energy-efficient refrigerators and washing machines built for daily reliability.', 'https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&q=80&w=800')" class="text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center gap-1">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kitchen Appliances Item 1 -->
+                <div class="product-card group bg-white rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 border border-slate-200/80" data-category="kitchen">
+                    <div class="relative h-56 bg-stone-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&q=80&w=800" alt="Mixie & Wet Grinder" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/f7f2e7/1e293b?text=Kitchen+Appliances'">
+                        <span class="absolute top-3 left-3 bg-brand-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">Kitchen Appliances</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-900 group-hover:text-brand-700 transition-colors">Mixers, Wet Grinders & Cooktops</h3>
+                        <p class="text-xs text-slate-500 mt-2 leading-relaxed">Heavy-duty mixer grinders, tabletop wet grinders, induction stoves, and gas cooktops built for daily cooking.</p>
+                        <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs font-medium text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md">Copper Motor</span>
+                            <button onclick="openProductModal('Mixers, Wet Grinders & Cooktops', 'Kitchen Appliances', 'Heavy-duty South Indian kitchen appliances with long-lasting motors.', 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&q=80&w=800')" class="text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center gap-1">
+                                Details <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="py-16 lg:py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info Panel -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-brand-700 font-bold text-xs tracking-wider uppercase bg-amber-100/60 px-3 py-1.5 rounded-full border border-amber-200">Visit & Connect</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 font-heading mt-3">Store Location & Email Contact</h2>
+                        <p class="text-slate-600 mt-2 text-sm leading-relaxed">We welcome you to visit our retail showroom in Attur to experience our furniture quality firsthand, or send us an inquiry directly via email.</p>
+                    </div>
+
+                    <!-- Address & Email Cards -->
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-amber-50/40 border border-amber-200/60">
+                            <div class="p-3 rounded-xl bg-brand-700 text-white text-lg shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-sm">Showroom Address</h3>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                    <strong>Ganapathy & Co</strong><br>
+                                    135/3b1b, Near Kongu Wedding Hall,<br>
+                                    Ammampalayam, Attur, Salem,<br>
+                                    Tamil Nadu - 636102
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-amber-50/40 border border-amber-200/60">
+                            <div class="p-3 rounded-xl bg-brand-700 text-white text-lg shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-sm">Email Address</h3>
+                                <p class="text-xs text-slate-600 mt-1">
+                                    <a href="mailto:ganapathyandco2026@gmail.com" class="hover:text-brand-700 font-semibold text-slate-800">ganapathyandco2026@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-5 rounded-2xl bg-amber-50/40 border border-amber-200/60">
+                            <div class="p-3 rounded-xl bg-brand-700 text-white text-lg shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-sm">Store Hours</h3>
+                                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                                    Monday – Sunday: 9:00 AM – 9:00 PM<br>
+                                    <span class="text-brand-700 font-medium">Open all 7 days for showroom visits</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Direct Link Box -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-map-location-dot text-brand-700 text-xl"></i>
+                            <span class="text-xs font-medium text-slate-700">Find us on Google Maps</span>
+                        </div>
+                        <a href="https://maps.app.goo.gl/zkbUzoBpmn51tD6J7" target="_blank" class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-700 hover:text-brand-700 font-semibold text-xs transition-colors">
+                            Open Map <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-xs">
+                        <h3 class="text-xl font-bold text-slate-900 font-heading mb-1">Send Us an Email Inquiry</h3>
+                        <p class="text-xs text-slate-500 mb-6">Have questions regarding furniture models or appliance stock? Fill in the form below to send an email inquiry.</p>
+
+                        <form id="email-inquiry-form" onsubmit="handleEmailSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Your Full Name *</label>
+                                    <input type="text" id="form-name" required placeholder="e.g. Ramesh Kumar" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-700 text-sm outline-none bg-white">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Your Email Address *</label>
+                                    <input type="email" id="form-email" required placeholder="e.g. ramesh@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-700 text-sm outline-none bg-white">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Category of Interest *</label>
+                                <select id="form-interest" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-700 text-sm outline-none bg-white">
+                                    <option value="Wooden Beds & Cots">Wooden Beds & Cots</option>
+                                    <option value="Teak Wooden Sofas">Teak Wooden Sofas</option>
+                                    <option value="Dining Tables & Furniture">Dining Tables & Furniture</option>
+                                    <option value="Smart TVs & Home Electronics">Smart TVs & Home Electronics</option>
+                                    <option value="Kitchen Appliances (Mixie/Grinder)">Kitchen Appliances (Mixie/Grinder)</option>
+                                    <option value="General Store Inquiry">General Store Inquiry</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Message Details</label>
+                                <textarea id="form-message" rows="4" placeholder="Please describe the item or requirement you are looking for..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-700 text-sm outline-none bg-white"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm shadow-sm transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Send Email Inquiry</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs sm:text-sm py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                
+                <!-- Col 1: Brand Info -->
+                <!-- Footer Logo Snippet -->
+                <!-- Footer Brand Block -->
+                <div class="flex items-center gap-3.5 mb-4">
+                    <div class="p-2 bg-white rounded-xl shadow-md">
+                        <img src="images/logo2.jpeg" alt="Ganapathy & Co Logo" class="h-12 w-auto object-contain">
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-xl font-bold text-white tracking-tight">Ganapathy & Co</h3>
+                        <p class="text-xs font-semibold text-[#D81B60] uppercase tracking-wider">Furnitures & Home Appliances • Attur</p>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation -->
+                <div>
+                    <h4 class="font-heading text-white font-bold text-sm mb-3">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-amber-200 transition-colors">Home Page</a></li>
+                        <li><a href="#about" class="hover:text-amber-200 transition-colors">Heritage & About</a></li>
+                        <li><a href="#categories" class="hover:text-amber-200 transition-colors">Product Collections</a></li>
+                        <li><a href="#contact" class="hover:text-amber-200 transition-colors">Contact & Location</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Address & Contact -->
+                <div>
+                    <h4 class="font-heading text-white font-bold text-sm mb-3">Store Location</h4>
+                    <p class="text-xs leading-relaxed text-slate-400">
+                        Near Kongu Wedding Mahal, Ammampalayam<br>
+                        Attur, Salem District, Tamil Nadu - 636102
+                    </p>
+                    <p class="text-xs mt-2 text-amber-200">
+                        <a href="mailto:ganapathyandco2026@gmail.com" class="hover:underline">ganapathyandco2026@gmail.com</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-2">
+                <p>© <span id="year"></span> Ganapathy & Co, Attur. All Rights Reserved.</p>
+                <p class="text-[11px]">Attur, Salem District • Furniture & Electronics</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-xl border border-slate-200 transform transition-all">
+            <div class="relative h-52 bg-slate-100">
+                <img id="modal-image" src="" alt="Product Detail" class="w-full h-full object-cover">
+                <button onclick="closeProductModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/70 text-white flex items-center justify-center hover:bg-slate-900 transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <span id="modal-category" class="absolute bottom-3 left-3 bg-brand-700 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md"></span>
+            </div>
+            <div class="p-6">
+                <h3 id="modal-title" class="font-heading text-lg font-bold text-slate-900"></h3>
+                <p id="modal-description" class="text-xs text-slate-600 mt-2 leading-relaxed"></p>
+                
+                <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-3">
+                    <button onclick="triggerModalEmailInquiry()" class="flex-1 py-3 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs text-center flex items-center justify-center gap-2 shadow-xs">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Email Inquiry</span>
+                    </button>
+                    <button onclick="closeProductModal()" class="px-4 py-3 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-100 font-semibold text-xs">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set Copyright Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Category Filtering Logic
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-brand-700', 'text-white', 'shadow-xs');
+                    b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+                });
+                btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+                btn.classList.add('bg-brand-700', 'text-white', 'shadow-xs');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                productCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Product Modal Logic
+        let currentModalProduct = '';
+
+        function openProductModal(title, category, description, imageSrc) {
+            currentModalProduct = title;
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-category').textContent = category;
+            document.getElementById('modal-description').textContent = description;
+            document.getElementById('modal-image').src = imageSrc;
+            document.getElementById('product-modal').classList.remove('hidden');
+        }
+
+        function closeProductModal() {
+            document.getElementById('product-modal').classList.add('hidden');
+        }
+
+        function triggerModalEmailInquiry() {
+            const subject = encodeURIComponent(`Inquiry regarding ${currentModalProduct} - Ganapathy & Co`);
+            const body = encodeURIComponent(`Hello Ganapathy & Co,\n\nI am interested in receiving details regarding: ${currentModalProduct}.\n\nPlease provide information on availability and options.\n\nThank you.`);
+            window.location.href = `mailto:ganapathyandco2026@gmail.com?subject=${subject}&body=${body}`;
+        }
+
+        // Email Form Submit Handler
+        function handleEmailSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const email = document.getElementById('form-email').value;
+            const interest = document.getElementById('form-interest').value;
+            const userMsg = document.getElementById('form-message').value;
+
+            const subject = encodeURIComponent(`Customer Inquiry: ${interest} - ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nCategory: ${interest}\n\nMessage Details:\n${userMsg}`);
+
+            window.location.href = `mailto:ganapathyandco2026@gmail.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+</body>
+</html>
